@@ -1,0 +1,75 @@
+\doxysection{v1\+\_\+0\+Vector/\+output.h File Reference}
+\hypertarget{output_8h}{}\label{output_8h}\index{v1\_0Vector/output.h@{v1\_0Vector/output.h}}
+
+
+Funkcijos studentų duomenų išvedimui.  
+
+
+{\ttfamily \+\#include "{}studentai.\+h"{}}\newline
+{\ttfamily \+\#include $<$vector$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{output_8h_a9cc30a8d0391f7a4ac06675814f8e0f4}{outputas}} (std::\+vector$<$ \doxymbox{\hyperlink{class_studentas}{Studentas}} $>$ \&grupe)
+\begin{DoxyCompactList}\small\item\em Išveda studentų duomenis į ekraną \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{output_8h_afd6a54906ab71987e4c81d030efdd1c8}{outputas\+\_\+fr}} (std::\+vector$<$ \doxymbox{\hyperlink{class_studentas}{Studentas}} $>$ \&grupe)
+\begin{DoxyCompactList}\small\item\em Išveda studentų duomenis į failą "{}rezultatai.\+txt"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Funkcijos studentų duomenų išvedimui. 
+
+\begin{DoxyAuthor}{Author}
+jusu vardas 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+5 
+\end{DoxyVersion}
+
+
+\label{output_8h_doc-func-members}
+\Hypertarget{output_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{output_8h_a9cc30a8d0391f7a4ac06675814f8e0f4}\index{output.h@{output.h}!outputas@{outputas}}
+\index{outputas@{outputas}!output.h@{output.h}}
+\doxysubsubsection{\texorpdfstring{outputas()}{outputas()}}
+{\footnotesize\ttfamily \label{output_8h_a9cc30a8d0391f7a4ac06675814f8e0f4} 
+void outputas (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{class_studentas}{Studentas}} $>$ \&}]{grupe}{}\end{DoxyParamCaption})}
+
+
+
+Išveda studentų duomenis į ekraną 
+
+Išvesties formatas:\+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Vardas\ \ \ \ \ \ \ \ \ \ Pavarde\ \ \ \ \ \ \ \ \ GalutinisMed\ \ \ \ GalutinisVid}
+\DoxyCodeLine{Jonas\ \ \ \ \ \ \ \ \ \ \ Jonaitis\ \ \ \ \ \ \ \ 7.88\ \ \ \ \ \ \ \ \ \ \ \ 7.90}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em grupe} & studentų vektorius \\
+\hline
+\end{DoxyParams}
+\Hypertarget{output_8h_afd6a54906ab71987e4c81d030efdd1c8}\index{output.h@{output.h}!outputas\_fr@{outputas\_fr}}
+\index{outputas\_fr@{outputas\_fr}!output.h@{output.h}}
+\doxysubsubsection{\texorpdfstring{outputas\_fr()}{outputas\_fr()}}
+{\footnotesize\ttfamily \label{output_8h_afd6a54906ab71987e4c81d030efdd1c8} 
+void outputas\+\_\+fr (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{class_studentas}{Studentas}} $>$ \&}]{grupe}{}\end{DoxyParamCaption})}
+
+
+
+Išveda studentų duomenis į failą "{}rezultatai.\+txt"{}. 
+
+Išvesties formatas toks pat kaip \doxylink{output_8h_a9cc30a8d0391f7a4ac06675814f8e0f4}{outputas()}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em grupe} & studentų vektorius \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\doxylink{output_8h_a9cc30a8d0391f7a4ac06675814f8e0f4}{outputas()} 
+\end{DoxySeeAlso}

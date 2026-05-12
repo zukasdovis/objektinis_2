@@ -1,0 +1,420 @@
+\doxysection{Studentas Class Reference}
+\hypertarget{class_studentas}{}\label{class_studentas}\index{Studentas@{Studentas}}
+
+
+Išvestinė klasė iš \doxylink{class_zmogus}{Zmogus} studento duomenims saugoti.  
+
+
+
+
+{\ttfamily \+\#include $<$studentai.\+h$>$}
+
+Inheritance diagram for Studentas:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_studentas}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_studentas_ab459e995e8c9b24cdc9aec5b09a66539}{Studentas}} ()
+\begin{DoxyCompactList}\small\item\em Default konstruktorius Sukuria tuščią studento objektą \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_studentas_a9c99fb8afa58ff7806759aa22e3c1a6f}{Studentas}} (const \doxymbox{\hyperlink{class_studentas}{Studentas}} \&kitas)
+\begin{DoxyCompactList}\small\item\em Copy konstruktorius. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_studentas_a35f81eeea8421d4c5a4d1a2e4cfd9f59}{Studentas}} (\doxymbox{\hyperlink{class_studentas}{Studentas}} \&\&kitas) noexcept
+\begin{DoxyCompactList}\small\item\em Move konstruktorius. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_studentas}{Studentas}} \& \doxymbox{\hyperlink{class_studentas_a8bd0a78e7c4ba39c5459c8e0b298bc47}{operator=}} (const \doxymbox{\hyperlink{class_studentas}{Studentas}} \&kitas)
+\begin{DoxyCompactList}\small\item\em Copy priskyrimo operatorius. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_studentas}{Studentas}} \& \doxymbox{\hyperlink{class_studentas_a3f542851deb85ac5cf58c6b62ab3b7c7}{operator=}} (\doxymbox{\hyperlink{class_studentas}{Studentas}} \&\&kitas) noexcept
+\begin{DoxyCompactList}\small\item\em Move priskyrimo operatorius. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_studentas_a1842a8cc1832df3ff02680383f473d98}{\texorpdfstring{$\sim$}{\string~}\+Studentas}} () override
+\begin{DoxyCompactList}\small\item\em Destruktorius. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_studentas_a00d6db6706f5e4182d3677ea4e90de61}{Studentas}} (std::\+istream \&is)
+\begin{DoxyCompactList}\small\item\em Konstruktorius iš įvesties srauto (be n) Naudojamas rankiniam įvedimui per cin arba stringstream. Skaito kol randa \textquotesingle{}\textbackslash{}n\textquotesingle{}. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_studentas_a8ab52dedf741d8ad9903f4b07866bffa}{Studentas}} (std::\+istream \&is, int n)
+\begin{DoxyCompactList}\small\item\em Konstruktorius iš įvesties srauto (su n) Naudojamas failo skaitymui kai žinomas pažymių kiekis. Greitesnis už versiją be n. \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_studentas_a6ad076a3d5afc1ec6eb1151a4af3d14a}{galutinis\+\_\+med}} () const
+\begin{DoxyCompactList}\small\item\em Grąžina galutinį balą pagal medianą (cache). \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_studentas_a1d14d35a6aa1163f188a2aacb7f31db5}{galutinis\+\_\+vid}} () const
+\begin{DoxyCompactList}\small\item\em Grąžina galutinį balą pagal vidurkį (cache). \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{class_studentas_a93a49617a180dc1f8da624b115fe1856}{gal\+Balas}} (double(\texorpdfstring{$\ast$}{*}f)(std::\+vector$<$ int $>$)=\doxymbox{\hyperlink{mediana_8cpp_a82db90e7c0ab06058206c3ecc28dcccc}{mediana}}) const
+\begin{DoxyCompactList}\small\item\em Skaičiuoja galutinį balą pagal pasirinktą funkciją \end{DoxyCompactList}\item 
+std::\+istream \& \doxymbox{\hyperlink{class_studentas_ae314a89464d756c76d573f81396a439a}{read\+Student}} (std::\+istream \&is) override
+\begin{DoxyCompactList}\small\item\em Nuskaito studento duomenis iš srauto (be n) Realizuoja \doxylink{class_zmogus}{Zmogus} grynąją virtualią funkciją. \end{DoxyCompactList}\item 
+std::\+istream \& \doxymbox{\hyperlink{class_studentas_a4f5694a76abb6871429187f5436cc532}{read\+Student}} (std::\+istream \&is, int n)
+\begin{DoxyCompactList}\small\item\em Nuskaito studento duomenis iš srauto (su n) Greitesnė versija kai žinomas pažymių kiekis. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_studentas_a3d73d57245cccb84a87fff820a32f205}{print}} (std::\+ostream \&os) const override
+\begin{DoxyCompactList}\small\item\em Išveda studento duomenis į srautą Realizuoja \doxylink{class_zmogus}{Zmogus} grynąją virtualią funkciją. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \doxymbox{\hyperlink{class_zmogus}{Zmogus}}}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_zmogus_aa7a8ba4d3c4778f9b35d59eef3e72574}{Zmogus}} ()
+\begin{DoxyCompactList}\small\item\em Default konstruktorius Sukuria tuščią žmogaus objektą \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_zmogus_ae6bfb71e4c8fddf15f3a19b4bcd6fd26}{Zmogus}} (const std::\+string \&vardas, const std::\+string \&pavarde)
+\begin{DoxyCompactList}\small\item\em Konstruktorius su parametrais. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_zmogus_a5c4ff9201f22476b17daf10ddc98c8f2}{Zmogus}} (const \doxymbox{\hyperlink{class_zmogus}{Zmogus}} \&kitas)
+\begin{DoxyCompactList}\small\item\em Copy konstruktorius. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_zmogus_ab256fa0664061801979e975781597b9d}{Zmogus}} (\doxymbox{\hyperlink{class_zmogus}{Zmogus}} \&\&kitas) noexcept
+\begin{DoxyCompactList}\small\item\em Move konstruktorius. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_zmogus}{Zmogus}} \& \doxymbox{\hyperlink{class_zmogus_ae44c61d87e480b6132fabe803a8b7029}{operator=}} (const \doxymbox{\hyperlink{class_zmogus}{Zmogus}} \&kitas)
+\begin{DoxyCompactList}\small\item\em Copy priskyrimo operatorius. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{class_zmogus}{Zmogus}} \& \doxymbox{\hyperlink{class_zmogus_a787dea8a50fc82591e76b302ba3976bf}{operator=}} (\doxymbox{\hyperlink{class_zmogus}{Zmogus}} \&\&kitas) noexcept
+\begin{DoxyCompactList}\small\item\em Move priskyrimo operatorius. \end{DoxyCompactList}\item 
+virtual \doxymbox{\hyperlink{class_zmogus_ac5615bf607a8f2f1b303ffa04328d24d}{\texorpdfstring{$\sim$}{\string~}\+Zmogus}} ()
+\begin{DoxyCompactList}\small\item\em Virtualus destruktorius Būtinas abstrakčiai klasei su virtualiais metodais. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_zmogus_a03de7738fc8f68275e401a3b96954cf0}{vardas}} () const
+\begin{DoxyCompactList}\small\item\em Grąžina vardą \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_zmogus_a24b5b4208f386916dc5c1ccf006bdedf}{pavarde}} () const
+\begin{DoxyCompactList}\small\item\em Grąžina pavardę \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std::\+istream \& \doxymbox{\hyperlink{class_studentas_ac63003b577b137ac6ad5b1fb176bd59a}{operator$>$$>$}} (std::\+istream \&is, \doxymbox{\hyperlink{class_studentas}{Studentas}} \&s)
+\begin{DoxyCompactList}\small\item\em Įvesties operatorius. \end{DoxyCompactList}\item 
+std::\+ostream \& \doxymbox{\hyperlink{class_studentas_a4062cbd3f4c44fac2063e38cfa00a8cf}{operator$<$$<$}} (std::\+ostream \&os, const \doxymbox{\hyperlink{class_studentas}{Studentas}} \&s)
+\begin{DoxyCompactList}\small\item\em Išvesties operatorius. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \doxymbox{\hyperlink{class_zmogus}{Zmogus}}}
+\begin{DoxyCompactItemize}
+\item 
+std::\+string \doxymbox{\hyperlink{class_zmogus_a80e72cd553492344884a264a72ce33d2}{vardas\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Žmogaus vardas. \end{DoxyCompactList}\item 
+std::\+string \doxymbox{\hyperlink{class_zmogus_a85cd6103a5f887059263d15413a3f081}{pavarde\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Žmogaus pavardė \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Išvestinė klasė iš \doxylink{class_zmogus}{Zmogus} studento duomenims saugoti. 
+
+Saugo namų darbų pažymius, egzamino pažymį ir skaičiuoja galutinius balus pagal medianą arba vidurkį.
+
+\begin{DoxyNote}{Note}
+Galutinio balo formulė:\+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{galutinis\ =\ 0.4\ *\ nd\_rezultatas\ +\ 0.6\ *\ egzaminas}
+
+\end{DoxyCode}
+
+\end{DoxyNote}
+Naudojimo pavyzdys:\+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{//\ Sukurti\ iš\ srauto}}
+\DoxyCodeLine{std::stringstream\ ss(\textcolor{stringliteral}{"{}Jonas\ Jonaitis\ 8\ 7\ 9\ 6\ 10"{}});}
+\DoxyCodeLine{\doxymbox{\hyperlink{class_studentas_ab459e995e8c9b24cdc9aec5b09a66539}{Studentas}}\ s(ss);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Išvesti}}
+\DoxyCodeLine{std::cout\ <<\ s;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{//\ Gauti\ balą}}
+\DoxyCodeLine{\textcolor{keywordtype}{double}\ med\ =\ s.galBalas(\doxymbox{\hyperlink{mediana_8cpp_a82db90e7c0ab06058206c3ecc28dcccc}{mediana}});}
+\DoxyCodeLine{\textcolor{keywordtype}{double}\ vid\ =\ s.galBalas(\doxymbox{\hyperlink{mediana_8cpp_a5268bd795cf9025a7744bcb797b6c21b}{vidurkis}});}
+
+\end{DoxyCode}
+ 
+
+\label{class_studentas_doc-constructors}
+\Hypertarget{class_studentas_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_studentas_ab459e995e8c9b24cdc9aec5b09a66539}\index{Studentas@{Studentas}!Studentas@{Studentas}}
+\index{Studentas@{Studentas}!Studentas@{Studentas}}
+\doxysubsubsection{\texorpdfstring{Studentas()}{Studentas()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily \label{class_studentas_ab459e995e8c9b24cdc9aec5b09a66539} 
+Studentas::\+\+Studentas (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default konstruktorius Sukuria tuščią studento objektą 
+
+\Hypertarget{class_studentas_a9c99fb8afa58ff7806759aa22e3c1a6f}\index{Studentas@{Studentas}!Studentas@{Studentas}}
+\index{Studentas@{Studentas}!Studentas@{Studentas}}
+\doxysubsubsection{\texorpdfstring{Studentas()}{Studentas()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily \label{class_studentas_a9c99fb8afa58ff7806759aa22e3c1a6f} 
+Studentas::\+\+Studentas (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_studentas}{Studentas}} \&}]{kitas}{}\end{DoxyParamCaption})}
+
+
+
+Copy konstruktorius. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em kitas} & kopijuojamas studentas \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_studentas_a35f81eeea8421d4c5a4d1a2e4cfd9f59}\index{Studentas@{Studentas}!Studentas@{Studentas}}
+\index{Studentas@{Studentas}!Studentas@{Studentas}}
+\doxysubsubsection{\texorpdfstring{Studentas()}{Studentas()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily \label{class_studentas_a35f81eeea8421d4c5a4d1a2e4cfd9f59} 
+Studentas::\+\+Studentas (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_studentas}{Studentas}} \&\&}]{kitas}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Move konstruktorius. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em kitas} & perkeliamas studentas -\/ po perkėlimo tampa tuščias \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_studentas_a1842a8cc1832df3ff02680383f473d98}\index{Studentas@{Studentas}!````~Studentas@{\texorpdfstring{$\sim$}{\string~}Studentas}}
+\index{````~Studentas@{\texorpdfstring{$\sim$}{\string~}Studentas}!Studentas@{Studentas}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Studentas()}{\string~Studentas()}}
+{\footnotesize\ttfamily \label{class_studentas_a1842a8cc1832df3ff02680383f473d98} 
+Studentas::\+\texorpdfstring{$\sim$}{\string~}\+Studentas (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+
+
+Destruktorius. 
+
+\Hypertarget{class_studentas_a00d6db6706f5e4182d3677ea4e90de61}\index{Studentas@{Studentas}!Studentas@{Studentas}}
+\index{Studentas@{Studentas}!Studentas@{Studentas}}
+\doxysubsubsection{\texorpdfstring{Studentas()}{Studentas()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily \label{class_studentas_a00d6db6706f5e4182d3677ea4e90de61} 
+Studentas::\+\+Studentas (\begin{DoxyParamCaption}\item[{std::\+istream \&}]{is}{}\end{DoxyParamCaption})}
+
+
+
+Konstruktorius iš įvesties srauto (be n) Naudojamas rankiniam įvedimui per cin arba stringstream. Skaito kol randa \textquotesingle{}\textbackslash{}n\textquotesingle{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is} & įvesties srautas \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_studentas_a8ab52dedf741d8ad9903f4b07866bffa}\index{Studentas@{Studentas}!Studentas@{Studentas}}
+\index{Studentas@{Studentas}!Studentas@{Studentas}}
+\doxysubsubsection{\texorpdfstring{Studentas()}{Studentas()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily \label{class_studentas_a8ab52dedf741d8ad9903f4b07866bffa} 
+Studentas::\+\+Studentas (\begin{DoxyParamCaption}\item[{std::\+istream \&}]{is}{, }\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Konstruktorius iš įvesties srauto (su n) Naudojamas failo skaitymui kai žinomas pažymių kiekis. Greitesnis už versiją be n. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is} & įvesties srautas \\
+\hline
+{\em n} & namų darbų pažymių kiekis \\
+\hline
+\end{DoxyParams}
+
+
+\label{class_studentas_doc-func-members}
+\Hypertarget{class_studentas_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_studentas_a93a49617a180dc1f8da624b115fe1856}\index{Studentas@{Studentas}!galBalas@{galBalas}}
+\index{galBalas@{galBalas}!Studentas@{Studentas}}
+\doxysubsubsection{\texorpdfstring{galBalas()}{galBalas()}}
+{\footnotesize\ttfamily \label{class_studentas_a93a49617a180dc1f8da624b115fe1856} 
+double Studentas::\+gal\+Balas (\begin{DoxyParamCaption}\item[{double(\texorpdfstring{$\ast$}{*}}]{f~}{)(std::\+vector$<$ int $>$) = {\ttfamily \doxymbox{\hyperlink{mediana_8cpp_a82db90e7c0ab06058206c3ecc28dcccc}{mediana}}}}\end{DoxyParamCaption}) const}
+
+
+
+Skaičiuoja galutinį balą pagal pasirinktą funkciją 
+
+
+\begin{DoxyParams}{Parameters}
+{\em f} & funkcija skaičiavimui -\/ mediana arba vidurkis (default:\+ mediana) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+galutinis balas
+\end{DoxyReturn}
+Pavyzdys:\+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{s.galBalas()\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ naudoja\ medianą}}
+\DoxyCodeLine{s.galBalas(\doxymbox{\hyperlink{mediana_8cpp_a82db90e7c0ab06058206c3ecc28dcccc}{mediana}})\ \ \ \textcolor{comment}{//\ naudoja\ medianą}}
+\DoxyCodeLine{s.galBalas(\doxymbox{\hyperlink{mediana_8cpp_a5268bd795cf9025a7744bcb797b6c21b}{vidurkis}})\ \ \textcolor{comment}{//\ naudoja\ vidurkį}}
+
+\end{DoxyCode}
+ \Hypertarget{class_studentas_a6ad076a3d5afc1ec6eb1151a4af3d14a}\index{Studentas@{Studentas}!galutinis\_med@{galutinis\_med}}
+\index{galutinis\_med@{galutinis\_med}!Studentas@{Studentas}}
+\doxysubsubsection{\texorpdfstring{galutinis\_med()}{galutinis\_med()}}
+{\footnotesize\ttfamily \label{class_studentas_a6ad076a3d5afc1ec6eb1151a4af3d14a} 
+double Studentas::\+galutinis\+\_\+med (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Grąžina galutinį balą pagal medianą (cache). 
+
+\begin{DoxyReturn}{Returns}
+galutinis balas pagal medianą 
+\end{DoxyReturn}
+\Hypertarget{class_studentas_a1d14d35a6aa1163f188a2aacb7f31db5}\index{Studentas@{Studentas}!galutinis\_vid@{galutinis\_vid}}
+\index{galutinis\_vid@{galutinis\_vid}!Studentas@{Studentas}}
+\doxysubsubsection{\texorpdfstring{galutinis\_vid()}{galutinis\_vid()}}
+{\footnotesize\ttfamily \label{class_studentas_a1d14d35a6aa1163f188a2aacb7f31db5} 
+double Studentas::\+galutinis\+\_\+vid (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Grąžina galutinį balą pagal vidurkį (cache). 
+
+\begin{DoxyReturn}{Returns}
+galutinis balas pagal vidurkį 
+\end{DoxyReturn}
+\Hypertarget{class_studentas_a8bd0a78e7c4ba39c5459c8e0b298bc47}\index{Studentas@{Studentas}!operator=@{operator=}}
+\index{operator=@{operator=}!Studentas@{Studentas}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_studentas_a8bd0a78e7c4ba39c5459c8e0b298bc47} 
+\doxymbox{\hyperlink{class_studentas}{Studentas}} \& Studentas::\+operator= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_studentas}{Studentas}} \&}]{kitas}{}\end{DoxyParamCaption})}
+
+
+
+Copy priskyrimo operatorius. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em kitas} & kopijuojamas studentas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nuoroda į šį objektą 
+\end{DoxyReturn}
+\Hypertarget{class_studentas_a3f542851deb85ac5cf58c6b62ab3b7c7}\index{Studentas@{Studentas}!operator=@{operator=}}
+\index{operator=@{operator=}!Studentas@{Studentas}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_studentas_a3f542851deb85ac5cf58c6b62ab3b7c7} 
+\doxymbox{\hyperlink{class_studentas}{Studentas}} \& Studentas::\+operator= (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_studentas}{Studentas}} \&\&}]{kitas}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+
+
+Move priskyrimo operatorius. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em kitas} & perkeliamas studentas -\/ po perkėlimo tampa tuščias \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nuoroda į šį objektą 
+\end{DoxyReturn}
+\Hypertarget{class_studentas_a3d73d57245cccb84a87fff820a32f205}\index{Studentas@{Studentas}!print@{print}}
+\index{print@{print}!Studentas@{Studentas}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily \label{class_studentas_a3d73d57245cccb84a87fff820a32f205} 
+void Studentas::\+print (\begin{DoxyParamCaption}\item[{std::\+ostream \&}]{os}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Išveda studento duomenis į srautą Realizuoja \doxylink{class_zmogus}{Zmogus} grynąją virtualią funkciją. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & išvesties srautas \\
+\hline
+\end{DoxyParams}
+
+
+Implements \doxymbox{\hyperlink{class_zmogus_ad93666793a4003d9ddc2ac571fec54f8}{Zmogus}}.
+
+\Hypertarget{class_studentas_ae314a89464d756c76d573f81396a439a}\index{Studentas@{Studentas}!readStudent@{readStudent}}
+\index{readStudent@{readStudent}!Studentas@{Studentas}}
+\doxysubsubsection{\texorpdfstring{readStudent()}{readStudent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{class_studentas_ae314a89464d756c76d573f81396a439a} 
+std::\+istream \& Studentas::\+read\+Student (\begin{DoxyParamCaption}\item[{std::\+istream \&}]{is}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Nuskaito studento duomenis iš srauto (be n) Realizuoja \doxylink{class_zmogus}{Zmogus} grynąją virtualią funkciją. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is} & įvesties srautas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+srautas po nuskaitymo 
+\end{DoxyReturn}
+
+
+Implements \doxymbox{\hyperlink{class_zmogus_adf395841da39a32a24b95cc714a8569b}{Zmogus}}.
+
+\Hypertarget{class_studentas_a4f5694a76abb6871429187f5436cc532}\index{Studentas@{Studentas}!readStudent@{readStudent}}
+\index{readStudent@{readStudent}!Studentas@{Studentas}}
+\doxysubsubsection{\texorpdfstring{readStudent()}{readStudent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{class_studentas_a4f5694a76abb6871429187f5436cc532} 
+std::\+istream \& Studentas::\+read\+Student (\begin{DoxyParamCaption}\item[{std::\+istream \&}]{is}{, }\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Nuskaito studento duomenis iš srauto (su n) Greitesnė versija kai žinomas pažymių kiekis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is} & įvesties srautas \\
+\hline
+{\em n} & namų darbų pažymių kiekis \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+srautas po nuskaitymo 
+\end{DoxyReturn}
+
+
+\label{class_studentas_doc-related-members}
+\Hypertarget{class_studentas_doc-related-members}
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{class_studentas_a4062cbd3f4c44fac2063e38cfa00a8cf}\index{Studentas@{Studentas}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Studentas@{Studentas}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily \label{class_studentas_a4062cbd3f4c44fac2063e38cfa00a8cf} 
+std::\+ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std::\+ostream \&}]{os}{, }\item[{const \doxymbox{\hyperlink{class_studentas}{Studentas}} \&}]{s}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Išvesties operatorius. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & išvesties srautas \\
+\hline
+{\em s} & išvedamas studentas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+srautas su studento duomenimis
+\end{DoxyReturn}
+Pavyzdys:\+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{class_studentas_ab459e995e8c9b24cdc9aec5b09a66539}{Studentas}}\ s;}
+\DoxyCodeLine{std::cout\ <<\ s;}
+\DoxyCodeLine{std::ofstream\ f(\textcolor{stringliteral}{"{}rezultatai.txt"{}});}
+\DoxyCodeLine{f\ <<\ s;}
+
+\end{DoxyCode}
+ \Hypertarget{class_studentas_ac63003b577b137ac6ad5b1fb176bd59a}\index{Studentas@{Studentas}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Studentas@{Studentas}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily \label{class_studentas_ac63003b577b137ac6ad5b1fb176bd59a} 
+std::\+istream \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std::\+istream \&}]{is}{, }\item[{\doxymbox{\hyperlink{class_studentas}{Studentas}} \&}]{s}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Įvesties operatorius. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is} & įvesties srautas \\
+\hline
+{\em s} & studentas į kurį skaitoma \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+srautas po nuskaitymo
+\end{DoxyReturn}
+Pavyzdys:\+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\doxymbox{\hyperlink{class_studentas_ab459e995e8c9b24cdc9aec5b09a66539}{Studentas}}\ s;}
+\DoxyCodeLine{std::cin\ >>\ s;}
+\DoxyCodeLine{std::ifstream\ f(\textcolor{stringliteral}{"{}studentai.txt"{}});}
+\DoxyCodeLine{f\ >>\ s;}
+
+\end{DoxyCode}
+ 
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+v1\+\_\+0\+Vector/\+\doxymbox{\hyperlink{studentai_8h}{studentai.\+h}}\item 
+v1\+\_\+0\+Vector/\+\doxymbox{\hyperlink{studentai_8cpp}{studentai.\+cpp}}\end{DoxyCompactItemize}

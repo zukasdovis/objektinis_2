@@ -1,0 +1,100 @@
+\doxysection{v1\+\_\+0\+Vector/\+studentai.h File Reference}
+\hypertarget{studentai_8h}{}\label{studentai_8h}\index{v1\_0Vector/studentai.h@{v1\_0Vector/studentai.h}}
+
+
+\doxylink{class_studentas}{Studentas} klasė išvesta iš \doxylink{class_zmogus}{Zmogus}.  
+
+
+{\ttfamily \+\#include "{}Zmogus.\+h"{}}\newline
+{\ttfamily \+\#include "{}mediana.\+h"{}}\newline
+{\ttfamily \+\#include $<$vector$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \doxymbox{\hyperlink{class_studentas}{Studentas}}
+\begin{DoxyCompactList}\small\item\em Išvestinė klasė iš \doxylink{class_zmogus}{Zmogus} studento duomenims saugoti. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \doxymbox{\hyperlink{studentai_8h_a385294361f54e09577f1cbbbc4b1e557}{compare}} (const \doxymbox{\hyperlink{class_studentas}{Studentas}} \&, const \doxymbox{\hyperlink{class_studentas}{Studentas}} \&)
+\begin{DoxyCompactList}\small\item\em Lygina du studentus pagal vardą \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{studentai_8h_a4664637b436e124fa3a31746dc402883}{compare\+Pagal\+Pavarde}} (const \doxymbox{\hyperlink{class_studentas}{Studentas}} \&, const \doxymbox{\hyperlink{class_studentas}{Studentas}} \&)
+\begin{DoxyCompactList}\small\item\em Lygina du studentus pagal pavardę \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{studentai_8h_aa6ab21c69c12cde861ce79c74365d3bb}{compare\+Pagal\+Egza}} (const \doxymbox{\hyperlink{class_studentas}{Studentas}} \&, const \doxymbox{\hyperlink{class_studentas}{Studentas}} \&)
+\begin{DoxyCompactList}\small\item\em Lygina du studentus pagal galutinį balą \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_studentas}{Studentas} klasė išvesta iš \doxylink{class_zmogus}{Zmogus}. 
+
+\begin{DoxyAuthor}{Author}
+jusu vardas 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+5 
+\end{DoxyVersion}
+
+
+\label{studentai_8h_doc-func-members}
+\Hypertarget{studentai_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{studentai_8h_a385294361f54e09577f1cbbbc4b1e557}\index{studentai.h@{studentai.h}!compare@{compare}}
+\index{compare@{compare}!studentai.h@{studentai.h}}
+\doxysubsubsection{\texorpdfstring{compare()}{compare()}}
+{\footnotesize\ttfamily \label{studentai_8h_a385294361f54e09577f1cbbbc4b1e557} 
+bool compare (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_studentas}{Studentas}} \&}]{A}{, }\item[{const \doxymbox{\hyperlink{class_studentas}{Studentas}} \&}]{B}{}\end{DoxyParamCaption})}
+
+
+
+Lygina du studentus pagal vardą 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & pirmasis studentas \\
+\hline
+{\em B} & antrasis studentas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true jei A.\+vardas \texorpdfstring{$<$}{<} B.\+vardas 
+\end{DoxyReturn}
+\Hypertarget{studentai_8h_aa6ab21c69c12cde861ce79c74365d3bb}\index{studentai.h@{studentai.h}!comparePagalEgza@{comparePagalEgza}}
+\index{comparePagalEgza@{comparePagalEgza}!studentai.h@{studentai.h}}
+\doxysubsubsection{\texorpdfstring{comparePagalEgza()}{comparePagalEgza()}}
+{\footnotesize\ttfamily \label{studentai_8h_aa6ab21c69c12cde861ce79c74365d3bb} 
+bool compare\+Pagal\+Egza (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_studentas}{Studentas}} \&}]{A}{, }\item[{const \doxymbox{\hyperlink{class_studentas}{Studentas}} \&}]{B}{}\end{DoxyParamCaption})}
+
+
+
+Lygina du studentus pagal galutinį balą 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & pirmasis studentas \\
+\hline
+{\em B} & antrasis studentas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true jei A.\+gal\+Balas \texorpdfstring{$<$}{<} B.\+gal\+Balas 
+\end{DoxyReturn}
+\Hypertarget{studentai_8h_a4664637b436e124fa3a31746dc402883}\index{studentai.h@{studentai.h}!comparePagalPavarde@{comparePagalPavarde}}
+\index{comparePagalPavarde@{comparePagalPavarde}!studentai.h@{studentai.h}}
+\doxysubsubsection{\texorpdfstring{comparePagalPavarde()}{comparePagalPavarde()}}
+{\footnotesize\ttfamily \label{studentai_8h_a4664637b436e124fa3a31746dc402883} 
+bool compare\+Pagal\+Pavarde (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_studentas}{Studentas}} \&}]{A}{, }\item[{const \doxymbox{\hyperlink{class_studentas}{Studentas}} \&}]{B}{}\end{DoxyParamCaption})}
+
+
+
+Lygina du studentus pagal pavardę 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & pirmasis studentas \\
+\hline
+{\em B} & antrasis studentas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true jei A.\+pavarde \texorpdfstring{$<$}{<} B.\+pavarde 
+\end{DoxyReturn}

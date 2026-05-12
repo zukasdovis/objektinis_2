@@ -1,0 +1,125 @@
+\doxysection{v1\+\_\+0\+Vector/\+rusiavimas.h File Reference}
+\hypertarget{rusiavimas_8h}{}\label{rusiavimas_8h}\index{v1\_0Vector/rusiavimas.h@{v1\_0Vector/rusiavimas.h}}
+
+
+Funkcijos studentų rūšiavimui ir skirstymui.  
+
+
+{\ttfamily \+\#include "{}studentai.\+h"{}}\newline
+{\ttfamily \+\#include "{}failai.\+h"{}}\newline
+{\ttfamily \+\#include $<$vector$>$}\newline
+{\ttfamily \+\#include $<$algorithm$>$}\newline
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include $<$fstream$>$}\newline
+{\ttfamily \+\#include $<$iomanip$>$}\newline
+{\ttfamily \+\#include $<$string$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Container$>$ }\\void \doxymbox{\hyperlink{rusiavimas_8h_ae031ba3af2067192897cd90596415fe6}{split\+Container}} (Container \&grupe, Container \&silpniakai)
+\begin{DoxyCompactList}\small\item\em Perskirsto studentus į du konteinerius pagal galutinį balą \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{rusiavimas_8h_a15f92f365f017867ffbeab1762140592}{failo\+Rusiavimas1}} (int kiekis)
+\begin{DoxyCompactList}\small\item\em Rūšiavimo metodas 1 -\/ du atskiri vektoriai. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{rusiavimas_8h_a1b77a9a1d3c47e7967f19e5e281a89ed}{failo\+Rusiavimas2}} (int kiekis)
+\begin{DoxyCompactList}\small\item\em Rūšiavimo metodas 2 -\/ rūšiavimas ir pop\+\_\+back. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{rusiavimas_8h_a40e1b456d9e88893e9b6129e211ecb0a}{failo\+Rusiavimas3}} (int kiekis)
+\begin{DoxyCompactList}\small\item\em Rūšiavimo metodas 3 -\/ std::\+partition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Funkcijos studentų rūšiavimui ir skirstymui. 
+
+\begin{DoxyAuthor}{Author}
+jusu vardas 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+5 
+\end{DoxyVersion}
+
+
+\label{rusiavimas_8h_doc-func-members}
+\Hypertarget{rusiavimas_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{rusiavimas_8h_a15f92f365f017867ffbeab1762140592}\index{rusiavimas.h@{rusiavimas.h}!failoRusiavimas1@{failoRusiavimas1}}
+\index{failoRusiavimas1@{failoRusiavimas1}!rusiavimas.h@{rusiavimas.h}}
+\doxysubsubsection{\texorpdfstring{failoRusiavimas1()}{failoRusiavimas1()}}
+{\footnotesize\ttfamily \label{rusiavimas_8h_a15f92f365f017867ffbeab1762140592} 
+void failo\+Rusiavimas1 (\begin{DoxyParamCaption}\item[{int}]{kiekis}{}\end{DoxyParamCaption})}
+
+
+
+Rūšiavimo metodas 1 -\/ du atskiri vektoriai. 
+
+Nuskaito failą, sukuria du atskirus vektorius (kietiakai/\+silpniakai), rūšiuoja ir išsaugo į failus.
+
+
+\begin{DoxyParams}{Parameters}
+{\em kiekis} & studentų kiekis faile \\
+\hline
+\end{DoxyParams}
+\Hypertarget{rusiavimas_8h_a1b77a9a1d3c47e7967f19e5e281a89ed}\index{rusiavimas.h@{rusiavimas.h}!failoRusiavimas2@{failoRusiavimas2}}
+\index{failoRusiavimas2@{failoRusiavimas2}!rusiavimas.h@{rusiavimas.h}}
+\doxysubsubsection{\texorpdfstring{failoRusiavimas2()}{failoRusiavimas2()}}
+{\footnotesize\ttfamily \label{rusiavimas_8h_a1b77a9a1d3c47e7967f19e5e281a89ed} 
+void failo\+Rusiavimas2 (\begin{DoxyParamCaption}\item[{int}]{kiekis}{}\end{DoxyParamCaption})}
+
+
+
+Rūšiavimo metodas 2 -\/ rūšiavimas ir pop\+\_\+back. 
+
+Nuskaito failą, surūšiuoja pagal balą, tada pop\+\_\+back\textquotesingle{}u atskiria silpnus studentus.
+
+
+\begin{DoxyParams}{Parameters}
+{\em kiekis} & studentų kiekis faile \\
+\hline
+\end{DoxyParams}
+\Hypertarget{rusiavimas_8h_a40e1b456d9e88893e9b6129e211ecb0a}\index{rusiavimas.h@{rusiavimas.h}!failoRusiavimas3@{failoRusiavimas3}}
+\index{failoRusiavimas3@{failoRusiavimas3}!rusiavimas.h@{rusiavimas.h}}
+\doxysubsubsection{\texorpdfstring{failoRusiavimas3()}{failoRusiavimas3()}}
+{\footnotesize\ttfamily \label{rusiavimas_8h_a40e1b456d9e88893e9b6129e211ecb0a} 
+void failo\+Rusiavimas3 (\begin{DoxyParamCaption}\item[{int}]{kiekis}{}\end{DoxyParamCaption})}
+
+
+
+Rūšiavimo metodas 3 -\/ std::\+partition. 
+
+Nuskaito failą, naudoja std::\+partition per split\+Container studentams atskirti.
+
+
+\begin{DoxyParams}{Parameters}
+{\em kiekis} & studentų kiekis faile \\
+\hline
+\end{DoxyParams}
+\Hypertarget{rusiavimas_8h_ae031ba3af2067192897cd90596415fe6}\index{rusiavimas.h@{rusiavimas.h}!splitContainer@{splitContainer}}
+\index{splitContainer@{splitContainer}!rusiavimas.h@{rusiavimas.h}}
+\doxysubsubsection{\texorpdfstring{splitContainer()}{splitContainer()}}
+{\footnotesize\ttfamily \label{rusiavimas_8h_ae031ba3af2067192897cd90596415fe6} 
+template$<$typename Container$>$ \\
+void split\+Container (\begin{DoxyParamCaption}\item[{Container \&}]{grupe}{, }\item[{Container \&}]{silpniakai}{}\end{DoxyParamCaption})}
+
+
+
+Perskirsto studentus į du konteinerius pagal galutinį balą 
+
+Studentai su balas \texorpdfstring{$>$}{>}= 5.\+0 lieka grupe, studentai su balas \texorpdfstring{$<$}{<} 5.\+0 perkeliami į silpniakai.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Container} & konteinerio tipas (pvz. vector$<$\+Studentas$>$) \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em grupe} & pradinis konteineris -\/ po funkcijos lieka tik \texorpdfstring{$>$}{>}= 5.\+0 \\
+\hline
+{\em silpniakai} & konteineris į kurį perkeliami \texorpdfstring{$<$}{<} 5.\+0\\
+\hline
+\end{DoxyParams}
+Pavyzdys:\+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{std::vector<Studentas>\ grupe,\ silpniakai;}
+\DoxyCodeLine{\doxymbox{\hyperlink{rusiavimas_8cpp_ae031ba3af2067192897cd90596415fe6}{splitContainer}}(grupe,\ silpniakai);}
+
+\end{DoxyCode}
+ 

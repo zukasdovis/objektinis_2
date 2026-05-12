@@ -1,0 +1,61 @@
+\doxysection{v1\+\_\+0\+Vector/\+failai.h File Reference}
+\hypertarget{failai_8h}{}\label{failai_8h}\index{v1\_0Vector/failai.h@{v1\_0Vector/failai.h}}
+
+
+Funkcijos darbui su failais.  
+
+
+{\ttfamily \+\#include "{}studentai.\+h"{}}\newline
+{\ttfamily \+\#include $<$vector$>$}\newline
+{\ttfamily \+\#include $<$string$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{failai_8h_ad31012cd585a6ccddff2dd18c9c74b3f}{failu\+\_\+nusk}} (std::\+vector$<$ \doxymbox{\hyperlink{class_studentas}{Studentas}} $>$ \&grupe, std::\+string failas)
+\begin{DoxyCompactList}\small\item\em Nuskaito studentų duomenis iš failo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Funkcijos darbui su failais. 
+
+\begin{DoxyAuthor}{Author}
+jusu vardas 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+5 
+\end{DoxyVersion}
+
+
+\label{failai_8h_doc-func-members}
+\Hypertarget{failai_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{failai_8h_ad31012cd585a6ccddff2dd18c9c74b3f}\index{failai.h@{failai.h}!failu\_nusk@{failu\_nusk}}
+\index{failu\_nusk@{failu\_nusk}!failai.h@{failai.h}}
+\doxysubsubsection{\texorpdfstring{failu\_nusk()}{failu\_nusk()}}
+{\footnotesize\ttfamily \label{failai_8h_ad31012cd585a6ccddff2dd18c9c74b3f} 
+void failu\+\_\+nusk (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{class_studentas}{Studentas}} $>$ \&}]{grupe}{, }\item[{std::\+string}]{failas}{}\end{DoxyParamCaption})}
+
+
+
+Nuskaito studentų duomenis iš failo. 
+
+Failo formatas:\+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Vardas\ Pavarde\ ND1\ ND2\ ...\ NDn\ Egzaminas}
+\DoxyCodeLine{Jonas\ \ Jonaitis\ 8\ \ \ 7\ \ \ 9\ \ \ 6\ \ 10}
+
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em grupe} & vektorius į kurį įrašomi studentai \\
+\hline
+{\em failas} & failo pavadinimas \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std::\+runtime\+\_\+error} & jei failas neegzistuoja \\
+\hline
+\end{DoxyExceptions}

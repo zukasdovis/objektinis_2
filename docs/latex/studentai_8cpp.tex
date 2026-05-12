@@ -1,0 +1,95 @@
+\doxysection{v1\+\_\+0\+Vector/\+studentai.cpp File Reference}
+\hypertarget{studentai_8cpp}{}\label{studentai_8cpp}\index{v1\_0Vector/studentai.cpp@{v1\_0Vector/studentai.cpp}}
+{\ttfamily \+\#include "{}studentai.\+h"{}}\newline
+{\ttfamily \+\#include $<$iomanip$>$}\newline
+{\ttfamily \+\#include $<$sstream$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+istream \& \doxymbox{\hyperlink{studentai_8cpp_adc51fc3cf314a8f8ec6b514156a65ae1}{operator$>$$>$}} (istream \&is, \doxymbox{\hyperlink{class_studentas}{Studentas}} \&s)
+\item 
+ostream \& \doxymbox{\hyperlink{studentai_8cpp_aa1b71bec62728d9606e1d7cc3e5787bf}{operator$<$$<$}} (ostream \&os, const \doxymbox{\hyperlink{class_studentas}{Studentas}} \&s)
+\item 
+bool \doxymbox{\hyperlink{studentai_8cpp_a9c347acaddf83f940f83cc2802256d58}{compare}} (const \doxymbox{\hyperlink{class_studentas}{Studentas}} \&A, const \doxymbox{\hyperlink{class_studentas}{Studentas}} \&B)
+\begin{DoxyCompactList}\small\item\em Lygina du studentus pagal vardą \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{studentai_8cpp_a1711d45837467b3c41fa486887bc077a}{compare\+Pagal\+Pavarde}} (const \doxymbox{\hyperlink{class_studentas}{Studentas}} \&A, const \doxymbox{\hyperlink{class_studentas}{Studentas}} \&B)
+\begin{DoxyCompactList}\small\item\em Lygina du studentus pagal pavardę \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{studentai_8cpp_abba96ad6e0d05d23801541ef0c9bd125}{compare\+Pagal\+Egza}} (const \doxymbox{\hyperlink{class_studentas}{Studentas}} \&A, const \doxymbox{\hyperlink{class_studentas}{Studentas}} \&B)
+\begin{DoxyCompactList}\small\item\em Lygina du studentus pagal galutinį balą \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\label{studentai_8cpp_doc-func-members}
+\Hypertarget{studentai_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{studentai_8cpp_a9c347acaddf83f940f83cc2802256d58}\index{studentai.cpp@{studentai.cpp}!compare@{compare}}
+\index{compare@{compare}!studentai.cpp@{studentai.cpp}}
+\doxysubsubsection{\texorpdfstring{compare()}{compare()}}
+{\footnotesize\ttfamily \label{studentai_8cpp_a9c347acaddf83f940f83cc2802256d58} 
+bool compare (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_studentas}{Studentas}} \&}]{A}{, }\item[{const \doxymbox{\hyperlink{class_studentas}{Studentas}} \&}]{B}{}\end{DoxyParamCaption})}
+
+
+
+Lygina du studentus pagal vardą 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & pirmasis studentas \\
+\hline
+{\em B} & antrasis studentas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true jei A.\+vardas \texorpdfstring{$<$}{<} B.\+vardas 
+\end{DoxyReturn}
+\Hypertarget{studentai_8cpp_abba96ad6e0d05d23801541ef0c9bd125}\index{studentai.cpp@{studentai.cpp}!comparePagalEgza@{comparePagalEgza}}
+\index{comparePagalEgza@{comparePagalEgza}!studentai.cpp@{studentai.cpp}}
+\doxysubsubsection{\texorpdfstring{comparePagalEgza()}{comparePagalEgza()}}
+{\footnotesize\ttfamily \label{studentai_8cpp_abba96ad6e0d05d23801541ef0c9bd125} 
+bool compare\+Pagal\+Egza (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_studentas}{Studentas}} \&}]{A}{, }\item[{const \doxymbox{\hyperlink{class_studentas}{Studentas}} \&}]{B}{}\end{DoxyParamCaption})}
+
+
+
+Lygina du studentus pagal galutinį balą 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & pirmasis studentas \\
+\hline
+{\em B} & antrasis studentas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true jei A.\+gal\+Balas \texorpdfstring{$<$}{<} B.\+gal\+Balas 
+\end{DoxyReturn}
+\Hypertarget{studentai_8cpp_a1711d45837467b3c41fa486887bc077a}\index{studentai.cpp@{studentai.cpp}!comparePagalPavarde@{comparePagalPavarde}}
+\index{comparePagalPavarde@{comparePagalPavarde}!studentai.cpp@{studentai.cpp}}
+\doxysubsubsection{\texorpdfstring{comparePagalPavarde()}{comparePagalPavarde()}}
+{\footnotesize\ttfamily \label{studentai_8cpp_a1711d45837467b3c41fa486887bc077a} 
+bool compare\+Pagal\+Pavarde (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{class_studentas}{Studentas}} \&}]{A}{, }\item[{const \doxymbox{\hyperlink{class_studentas}{Studentas}} \&}]{B}{}\end{DoxyParamCaption})}
+
+
+
+Lygina du studentus pagal pavardę 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & pirmasis studentas \\
+\hline
+{\em B} & antrasis studentas \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true jei A.\+pavarde \texorpdfstring{$<$}{<} B.\+pavarde 
+\end{DoxyReturn}
+\Hypertarget{studentai_8cpp_aa1b71bec62728d9606e1d7cc3e5787bf}\index{studentai.cpp@{studentai.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!studentai.cpp@{studentai.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily \label{studentai_8cpp_aa1b71bec62728d9606e1d7cc3e5787bf} 
+ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{os}{, }\item[{const \doxymbox{\hyperlink{class_studentas}{Studentas}} \&}]{s}{}\end{DoxyParamCaption})}
+
+\Hypertarget{studentai_8cpp_adc51fc3cf314a8f8ec6b514156a65ae1}\index{studentai.cpp@{studentai.cpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!studentai.cpp@{studentai.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}}
+{\footnotesize\ttfamily \label{studentai_8cpp_adc51fc3cf314a8f8ec6b514156a65ae1} 
+istream \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{istream \&}]{is}{, }\item[{\doxymbox{\hyperlink{class_studentas}{Studentas}} \&}]{s}{}\end{DoxyParamCaption})}
+

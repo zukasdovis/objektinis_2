@@ -1,0 +1,101 @@
+\doxysection{v1\+\_\+0\+Vector/\+ivedimas.h File Reference}
+\hypertarget{ivedimas_8h}{}\label{ivedimas_8h}\index{v1\_0Vector/ivedimas.h@{v1\_0Vector/ivedimas.h}}
+
+
+Funkcijos studentų duomenų įvedimui.  
+
+
+{\ttfamily \+\#include "{}studentai.\+h"{}}\newline
+{\ttfamily \+\#include $<$vector$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{ivedimas_8h_a8f42e18bb04534c33b67bbbd645c75b2}{ranka}} (std::\+vector$<$ \doxymbox{\hyperlink{class_studentas}{Studentas}} $>$ \&grupe)
+\begin{DoxyCompactList}\small\item\em Įveda studentus rankiniu būdu iš klaviatūros. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{ivedimas_8h_a214bee2868e49904d283118407ff55fd}{pazymiu\+\_\+gen}} (std::\+vector$<$ \doxymbox{\hyperlink{class_studentas}{Studentas}} $>$ \&grupe)
+\begin{DoxyCompactList}\small\item\em Įveda studentus su atsitiktinai generuojamais pažymiais. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{ivedimas_8h_a587f67900e84db144bfc0f7ba7b13934}{visk\+\_\+gen}} (std::\+vector$<$ \doxymbox{\hyperlink{class_studentas}{Studentas}} $>$ \&grupe)
+\begin{DoxyCompactList}\small\item\em Generuoja studentus su atsitiktiniais duomenimis. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Funkcijos studentų duomenų įvedimui. 
+
+\begin{DoxyAuthor}{Author}
+jusu vardas 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+5 
+\end{DoxyVersion}
+
+
+\label{ivedimas_8h_doc-func-members}
+\Hypertarget{ivedimas_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{ivedimas_8h_a214bee2868e49904d283118407ff55fd}\index{ivedimas.h@{ivedimas.h}!pazymiu\_gen@{pazymiu\_gen}}
+\index{pazymiu\_gen@{pazymiu\_gen}!ivedimas.h@{ivedimas.h}}
+\doxysubsubsection{\texorpdfstring{pazymiu\_gen()}{pazymiu\_gen()}}
+{\footnotesize\ttfamily \label{ivedimas_8h_a214bee2868e49904d283118407ff55fd} 
+void pazymiu\+\_\+gen (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{class_studentas}{Studentas}} $>$ \&}]{grupe}{}\end{DoxyParamCaption})}
+
+
+
+Įveda studentus su atsitiktinai generuojamais pažymiais. 
+
+Vartotojas įveda vardą ir pavardę, pažymiai generuojami automatiškai. Įvedimas baigiamas įvedus "{}0 0"{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em grupe} & vektorius į kurį pridedami studentai \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std::\+runtime\+\_\+error} & jei įvestis neteisinga \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{ivedimas_8h_a8f42e18bb04534c33b67bbbd645c75b2}\index{ivedimas.h@{ivedimas.h}!ranka@{ranka}}
+\index{ranka@{ranka}!ivedimas.h@{ivedimas.h}}
+\doxysubsubsection{\texorpdfstring{ranka()}{ranka()}}
+{\footnotesize\ttfamily \label{ivedimas_8h_a8f42e18bb04534c33b67bbbd645c75b2} 
+void ranka (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{class_studentas}{Studentas}} $>$ \&}]{grupe}{}\end{DoxyParamCaption})}
+
+
+
+Įveda studentus rankiniu būdu iš klaviatūros. 
+
+Vartotojas įveda vardą, pavardę, pažymius ir egzaminą. Įvedimas baigiamas įvedus "{}0 0"{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em grupe} & vektorius į kurį pridedami studentai \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std::\+runtime\+\_\+error} & jei įvestis neteisinga\\
+\hline
+\end{DoxyExceptions}
+Pavyzdys:\+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{std::vector<Studentas>\ grupe;}
+\DoxyCodeLine{\doxymbox{\hyperlink{ivedimas_8cpp_a92412ce5553955700335e19552d36328}{ranka}}(grupe);}
+
+\end{DoxyCode}
+ \Hypertarget{ivedimas_8h_a587f67900e84db144bfc0f7ba7b13934}\index{ivedimas.h@{ivedimas.h}!visk\_gen@{visk\_gen}}
+\index{visk\_gen@{visk\_gen}!ivedimas.h@{ivedimas.h}}
+\doxysubsubsection{\texorpdfstring{visk\_gen()}{visk\_gen()}}
+{\footnotesize\ttfamily \label{ivedimas_8h_a587f67900e84db144bfc0f7ba7b13934} 
+void visk\+\_\+gen (\begin{DoxyParamCaption}\item[{std::\+vector$<$ \doxymbox{\hyperlink{class_studentas}{Studentas}} $>$ \&}]{grupe}{}\end{DoxyParamCaption})}
+
+
+
+Generuoja studentus su atsitiktiniais duomenimis. 
+
+Vardai, pavardės ir pažymiai generuojami automatiškai.
+
+
+\begin{DoxyParams}{Parameters}
+{\em grupe} & vektorius į kurį pridedami studentai \\
+\hline
+\end{DoxyParams}

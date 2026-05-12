@@ -1,0 +1,80 @@
+\doxysection{v1\+\_\+0\+Vector/\+mediana.h File Reference}
+\hypertarget{mediana_8h}{}\label{mediana_8h}\index{v1\_0Vector/mediana.h@{v1\_0Vector/mediana.h}}
+
+
+Statistinių funkcijų deklaracijos.  
+
+
+{\ttfamily \+\#include $<$vector$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \doxymbox{\hyperlink{mediana_8h_a82db90e7c0ab06058206c3ecc28dcccc}{mediana}} (std::\+vector$<$ int $>$ nd)
+\begin{DoxyCompactList}\small\item\em Skaičiuoja skaičių vektoriaus medianą \end{DoxyCompactList}\item 
+double \doxymbox{\hyperlink{mediana_8h_a5268bd795cf9025a7744bcb797b6c21b}{vidurkis}} (std::\+vector$<$ int $>$ nd)
+\begin{DoxyCompactList}\small\item\em Skaičiuoja skaičių vektoriaus vidurkį \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Statistinių funkcijų deklaracijos. 
+
+\begin{DoxyAuthor}{Author}
+jusu vardas 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+5 
+\end{DoxyVersion}
+
+
+\label{mediana_8h_doc-func-members}
+\Hypertarget{mediana_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{mediana_8h_a82db90e7c0ab06058206c3ecc28dcccc}\index{mediana.h@{mediana.h}!mediana@{mediana}}
+\index{mediana@{mediana}!mediana.h@{mediana.h}}
+\doxysubsubsection{\texorpdfstring{mediana()}{mediana()}}
+{\footnotesize\ttfamily \label{mediana_8h_a82db90e7c0ab06058206c3ecc28dcccc} 
+double mediana (\begin{DoxyParamCaption}\item[{std::\+vector$<$ int $>$}]{nd}{}\end{DoxyParamCaption})}
+
+
+
+Skaičiuoja skaičių vektoriaus medianą 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nd} & skaičių vektorius \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+mediana arba 0.\+0 jei vektorius tuščias
+\end{DoxyReturn}
+Pavyzdys:\+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{std::vector<int>\ v\ =\ \{6,\ 8,\ 10\};}
+\DoxyCodeLine{\textcolor{keywordtype}{double}\ m\ =\ \doxymbox{\hyperlink{mediana_8cpp_a82db90e7c0ab06058206c3ecc28dcccc}{mediana}}(v);\ \textcolor{comment}{//\ 8.0}}
+
+\end{DoxyCode}
+ \Hypertarget{mediana_8h_a5268bd795cf9025a7744bcb797b6c21b}\index{mediana.h@{mediana.h}!vidurkis@{vidurkis}}
+\index{vidurkis@{vidurkis}!mediana.h@{mediana.h}}
+\doxysubsubsection{\texorpdfstring{vidurkis()}{vidurkis()}}
+{\footnotesize\ttfamily \label{mediana_8h_a5268bd795cf9025a7744bcb797b6c21b} 
+double vidurkis (\begin{DoxyParamCaption}\item[{std::\+vector$<$ int $>$}]{nd}{}\end{DoxyParamCaption})}
+
+
+
+Skaičiuoja skaičių vektoriaus vidurkį 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nd} & skaičių vektorius \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vidurkis arba 0.\+0 jei vektorius tuščias
+\end{DoxyReturn}
+Pavyzdys:\+ 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{std::vector<int>\ v\ =\ \{6,\ 8,\ 10\};}
+\DoxyCodeLine{\textcolor{keywordtype}{double}\ v\ =\ \doxymbox{\hyperlink{mediana_8cpp_a5268bd795cf9025a7744bcb797b6c21b}{vidurkis}}(v);\ \textcolor{comment}{//\ 8.0}}
+
+\end{DoxyCode}
+ 

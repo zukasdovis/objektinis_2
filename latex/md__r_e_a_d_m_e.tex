@@ -1,0 +1,39 @@
+\chapter{Studentas v1.\+2 }
+\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{Studentas v1.2@{Studentas v1.2}}
+\label{md__r_e_a_d_m_e_autotoc_md0}%
+\Hypertarget{md__r_e_a_d_m_e_autotoc_md0}%
+\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{\texorpdfstring{v1.\+5 rezultatai}{v1.\+5 rezultatai}}\label{md__r_e_a_d_m_e_autotoc_md1}
+Šioje versijoje išlaikyta ta pati v1.\+2 versijos logika, tačiau pridėta abstrakti bazinė klasė {\ttfamily Zmogus} ir iš jos išvesta {\ttfamily Studentas} klasė.
+
+
+\begin{DoxyTable}{3}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Klasė  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Tipas  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Ką saugo  \\
+{\ttfamily Zmogus}  &Abstract  &vardą ir pavardę  \\
+{\ttfamily Studentas}  &Derived  &pažymius, egzamino balą, galutinius įvertinimus  \\
+\end{DoxyTable}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysubsection{\texorpdfstring{Bandymas sukurti abstrakčios "{}\+Zmogus"{} klasės objektą}{Bandymas sukurti abstrakčios "{}\+Zmogus"{} klasės objektą}}\label{md__r_e_a_d_m_e_autotoc_md3}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysubsection{\texorpdfstring{}{}}\label{md__r_e_a_d_m_e_autotoc_md4}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysubsection{\texorpdfstring{Rule of Five metodai}{Rule of Five metodai}}\label{md__r_e_a_d_m_e_autotoc_md5}
+
+\begin{DoxyTable}{3}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Metodas  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Sintaksė  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Paskirtis  \\
+Default konstruktorius  &{\ttfamily Studentas()}  &Sukuria tuščią objektą  \\
+Copy konstruktorius  &{\ttfamily Studentas(const Studentas\& a)}  &Kuriama objekto kopija  \\
+Copy priskyrimo operatorius  &{\ttfamily Studentas\& operator=(const Studentas\& a)}  &Objekto kopijos priskyrimas — {\ttfamily b = a}  \\
+Move konstruktorius  &{\ttfamily Studentas(Studentas\&\& a)}  &Objekto perėmimas — {\ttfamily Studentas b = std::\+move(a)}  \\
+Move priskyrimo operatorius  &{\ttfamily Studentas\& operator=(Studentas\&\& a)}  &Objekto perėmimas — {\ttfamily b = std::\+move(a)}  \\
+Destruktorius  &{\ttfamily \texorpdfstring{$\sim$}{\string~}\+Studentas()}  &Objekto sunaikinimas (veikia automatiškai)  \\
+\end{DoxyTable}
+
+
+\DoxyHorRuler{0}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysubsection{\texorpdfstring{Įvesties/\+\+Išvesties operatoriai}{Įvesties/\+\+Išvesties operatoriai}}\label{md__r_e_a_d_m_e_autotoc_md7}
+
+\begin{DoxyTable}{3}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Operatorius  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Sintaksė  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Paskirtis  \\
+{\ttfamily operator\texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>}}  &{\ttfamily std::\+istream\& operator\texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>}(std::\+istream\& is, Studentas\& s)}  &Nuskaito duomenis iš srauto į objektą  \\
+{\ttfamily operator\texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}}  &{\ttfamily std::\+ostream\& operator\texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}(std::\+ostream\& os, const Studentas\& s)}  &Išveda objekto duomenis į srautą  \\
+\end{DoxyTable}
