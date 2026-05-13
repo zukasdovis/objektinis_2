@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include "vector.h"
 #include <string>
 #include <algorithm>
 #include <stdexcept>
@@ -23,7 +24,7 @@ using std::vector;
 int main()
 {
     srand(time(0));
-    vector<Studentas> grupe;
+    Vector<Studentas> grupe;
 
     while (true)
     {

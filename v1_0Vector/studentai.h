@@ -4,6 +4,7 @@
 #include "Zmogus.h"
 #include "mediana.h"
 #include <vector>
+#include "vector.h"
 
 /**
  * @file studentai.h
@@ -42,7 +43,7 @@ class Studentas : public Zmogus
 {
 private:
     double egzaminas_;     ///< Egzamino pažymys
-    std::vector<int> nd_;  ///< Namų darbų pažymiai
+    Vector<int> nd_;       ///< Namų darbų pažymiai
     double galutinis_med_; ///< Galutinis balas pagal medianą (cache)
     double galutinis_vid_; ///< Galutinis balas pagal vidurkį (cache)
 
@@ -125,7 +126,7 @@ public:
      * s.galBalas(vidurkis)  // naudoja vidurkį
      * @endcode
      */
-    double galBalas(double (*f)(std::vector<int>) = mediana) const;
+    double galBalas(double (*f)(Vector<int>) = mediana) const;
 
     /**
      * @brief Nuskaito studento duomenis iš srauto (be n)

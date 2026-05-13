@@ -1,4 +1,5 @@
 #include "studentai.h"
+#include "vector.h"
 #include <iomanip>
 #include <sstream>
 
@@ -71,7 +72,7 @@ Studentas::Studentas(istream &is, int n) : Zmogus()
 }
 
 // galBalas
-double Studentas::galBalas(double (*f)(vector<int>)) const
+double Studentas::galBalas(double (*f)(Vector<int>)) const
 {
     if (f == mediana)
         return galutinis_med_;

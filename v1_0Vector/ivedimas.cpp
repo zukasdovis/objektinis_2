@@ -1,5 +1,6 @@
 #include "ivedimas.h"
 #include "mediana.h"
+#include "vector.h"
 #include <iostream>
 #include <sstream>
 #include <algorithm>
@@ -12,7 +13,7 @@ using std::string;
 using std::stringstream;
 using std::vector;
 
-void ranka(vector<Studentas> &grupe)
+void ranka(Vector<Studentas> &grupe)
 {
     while (true)
     {
@@ -41,7 +42,7 @@ void ranka(vector<Studentas> &grupe)
     }
 }
 
-void pazymiu_gen(vector<Studentas> &grupe)
+void pazymiu_gen(Vector<Studentas> &grupe)
 {
     while (true)
     {
@@ -67,7 +68,7 @@ void pazymiu_gen(vector<Studentas> &grupe)
     }
 }
 
-void visk_gen(vector<Studentas> &grupe)
+void visk_gen(Vector<Studentas> &grupe)
 {
     const string vardai[10] = {"Jonas", "Petras", "Antanas", "Kazys", "Stasys",
                                "Mantas", "Rytis", "Darius", "Romas", "Linas"};

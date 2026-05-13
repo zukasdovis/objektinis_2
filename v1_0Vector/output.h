@@ -3,6 +3,7 @@
 
 #include "studentai.h"
 #include <vector>
+#include "vector.h"
 
 /**
  * @file output.h
@@ -22,7 +23,7 @@
  *
  * @param grupe studentų vektorius
  */
-void outputas(std::vector<Studentas> &grupe);
+void outputas(Vector<Studentas> &grupe);
 
 /**
  * @brief Išveda studentų duomenis į failą "rezultatai.txt"
@@ -32,6 +33,6 @@ void outputas(std::vector<Studentas> &grupe);
  * @param grupe studentų vektorius
  * @see outputas()
  */
-void outputas_fr(std::vector<Studentas> &grupe);
+void outputas_fr(Vector<Studentas> &grupe);
 
 #endif

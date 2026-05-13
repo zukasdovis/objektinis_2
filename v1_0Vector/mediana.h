@@ -2,6 +2,7 @@
 #define MEDIANA_H
 
 #include <vector>
+#include "vector.h"
 
 /**
  * @file mediana.h
@@ -21,7 +22,7 @@
  * double m = mediana(v); // 8.0
  * @endcode
  */
-double mediana(std::vector<int> nd);
+double mediana(Vector<int> nd);
 
 /**
  * @brief Skaičiuoja skaičių vektoriaus vidurkį
@@ -34,6 +35,6 @@ double mediana(std::vector<int> nd);
  * double v = vidurkis(v); // 8.0
  * @endcode
  */
-double vidurkis(std::vector<int> nd);
+double vidurkis(Vector<int> nd);
 
 #endif

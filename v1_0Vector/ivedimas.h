@@ -2,6 +2,7 @@
 #define IVEDIMAS_H
 
 #include "studentai.h"
+#include "vector.h"
 #include <vector>
 
 /**
@@ -26,7 +27,7 @@
  * ranka(grupe);
  * @endcode
  */
-void ranka(std::vector<Studentas> &grupe);
+void ranka(Vector<Studentas> &grupe);
 
 /**
  * @brief Įveda studentus su atsitiktinai generuojamais pažymiais
@@ -37,7 +38,7 @@ void ranka(std::vector<Studentas> &grupe);
  * @param grupe vektorius į kurį pridedami studentai
  * @throws std::runtime_error jei įvestis neteisinga
  */
-void pazymiu_gen(std::vector<Studentas> &grupe);
+void pazymiu_gen(Vector<Studentas> &grupe);
 
 /**
  * @brief Generuoja studentus su atsitiktiniais duomenimis
@@ -46,6 +47,6 @@ void pazymiu_gen(std::vector<Studentas> &grupe);
  *
  * @param grupe vektorius į kurį pridedami studentai
  */
-void visk_gen(std::vector<Studentas> &grupe);
+void visk_gen(Vector<Studentas> &grupe);
 
 #endif

@@ -292,6 +292,33 @@ public:
         size_++;
         return data_ + idx;
     }
+    /// Įterpia elementų intervalą iš iteratorių
+    template <typename InputIt>
+    iterator insert(iterator pos, InputIt first, InputIt last)
+    {
+        size_type idx = pos - data_;
+        size_type count = std::distance(first, last);
+
+        if (size_ + count > capacity_)
+            reserve((size_ + count) * 2);
+
+        // pastumiam esamus elementus į dešinę
+        for (size_type i = size_ + count - 1; i >= idx + count; i--)
+        {
+            new (data_ + i) T(std::move(data_[i - count]));
+            data_[i - count].~T();
+        }
+
+        // įterpiame naujus elementus
+        size_type i = idx;
+        for (InputIt it = first; it != last; it++, i++)
+        {
+            new (data_ + i) T(*it);
+        }
+
+        size_ += count;
+        return data_ + idx;
+    }
 
     /// Ištrina elementą iš pozicijos
     iterator erase(iterator pos)

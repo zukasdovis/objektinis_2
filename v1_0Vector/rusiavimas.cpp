@@ -1,4 +1,5 @@
 #include "rusiavimas.h"
+#include "vector.h"
 using namespace std;
 
 template <typename Container>
@@ -14,7 +15,7 @@ void splitContainer(Container &grupe, Container &silpniakai)
 void failoRusiavimas1(int kiekis)
 {
     string failas = "studentai_" + to_string(kiekis) + ".txt";
-    vector<Studentas> grupe;
+    Vector<Studentas> grupe;
 
     clock_t start = clock();
     failu_nusk(grupe, failas);
@@ -22,15 +23,20 @@ void failoRusiavimas1(int kiekis)
     double laikas1 = double(end - start) / CLOCKS_PER_SEC;
     cout << "Faila nuskaite per " << laikas1 << " s\n";
 
-    vector<Studentas> silpniakai, kietiakai;
-
+    Vector<Studentas> silpniakai, kietiakai;
+    int perskirstymu_sk = 0;
     clock_t start1 = clock();
     for (const auto &student : grupe)
     {
         if (student.galBalas() > 5.0)
+        {
             kietiakai.push_back(student);
+        }
+
         else
+        {
             silpniakai.push_back(student);
+        }
     }
     clock_t end1 = clock();
     double laikas2 = double(end1 - start1) / CLOCKS_PER_SEC;
@@ -88,7 +94,7 @@ void failoRusiavimas1(int kiekis)
 void failoRusiavimas2(int kiekis)
 {
     string failas = "studentai_" + to_string(kiekis) + ".txt";
-    vector<Studentas> grupe;
+    Vector<Studentas> grupe;
 
     clock_t start = clock();
     failu_nusk(grupe, failas);
@@ -96,7 +102,7 @@ void failoRusiavimas2(int kiekis)
     double laikas1 = double(end - start) / CLOCKS_PER_SEC;
     cout << "Faila nuskaite per " << laikas1 << " s\n";
 
-    vector<Studentas> silpniakai;
+    Vector<Studentas> silpniakai;
 
     clock_t start1 = clock();
     sort(grupe.begin(), grupe.end(), comparePagalEgza);
@@ -163,7 +169,7 @@ void failoRusiavimas2(int kiekis)
 void failoRusiavimas3(int kiekis)
 {
     string failas = "studentai_" + to_string(kiekis) + ".txt";
-    vector<Studentas> grupe;
+    Vector<Studentas> grupe;
 
     clock_t start = clock();
     failu_nusk(grupe, failas);
@@ -171,7 +177,7 @@ void failoRusiavimas3(int kiekis)
     double laikas1 = double(end - start) / CLOCKS_PER_SEC;
     cout << "Faila nuskaite per " << laikas1 << " s\n";
 
-    vector<Studentas> silpniakai;
+    Vector<Studentas> silpniakai;
 
     clock_t start1 = clock();
     splitContainer(grupe, silpniakai);

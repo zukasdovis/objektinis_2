@@ -1,7 +1,8 @@
 #include "mediana.h"
+#include "vector.h"
 #include <algorithm>
 
-double mediana(std::vector<int> nd)
+double mediana(Vector<int> nd)
 {
     if (nd.empty())
         return 0.0;
@@ -12,7 +13,7 @@ double mediana(std::vector<int> nd)
     return nd[n / 2];
 }
 
-double vidurkis(std::vector<int> nd)
+double vidurkis(Vector<int> nd)
 {
     if (nd.empty())
         return 0.0;

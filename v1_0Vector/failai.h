@@ -2,6 +2,7 @@
 #define FAILAI_H
 
 #include "studentai.h"
+#include "vector.h"
 #include <vector>
 #include <string>
 
@@ -25,6 +26,6 @@
  * @param failas failo pavadinimas
  * @throws std::runtime_error jei failas neegzistuoja
  */
-void failu_nusk(std::vector<Studentas> &grupe, std::string failas);
+void failu_nusk(Vector<Studentas> &grupe, std::string failas);
 
 #endif

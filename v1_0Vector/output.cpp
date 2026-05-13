@@ -1,5 +1,6 @@
 #include "output.h"
 #include "mediana.h"
+#include "vector.h"
 #include <iostream>
 #include <fstream>
 #include <iomanip>
@@ -13,7 +14,7 @@ using std::setprecision;
 using std::setw;
 using std::vector;
 
-void outputas(vector<Studentas> &grupe)
+void outputas(Vector<Studentas> &grupe)
 {
     cout << fixed << setprecision(2);
     cout << left << setw(16) << "Vardas"
@@ -29,7 +30,7 @@ void outputas(vector<Studentas> &grupe)
     }
 }
 
-void outputas_fr(vector<Studentas> &grupe)
+void outputas_fr(Vector<Studentas> &grupe)
 {
     ofstream fr("rezultatai.txt");
     fr << fixed << setprecision(2);
