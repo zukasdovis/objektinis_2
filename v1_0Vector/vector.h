@@ -8,7 +8,27 @@
 
 /**
  * @file Vector.h
- * @brief Nuosavas Vector konteineris, atitinkantis std::vector funkcionalumą
+ * @brief Nuosavas dinaminis masyvas - std::vector analogas
+ * @version 3.0
+ *
+ * @details
+ * Realizuoti metodai:
+ * - Konstruktoriai (default, copy, move, size, initializer_list)
+ * - Rule of Five (copy/move konstruktoriai ir assignment, destruktorius)
+ * - Elementų prieiga (at, operator[], front, back, data)
+ * - Iteratoriai (begin, end, cbegin, cend)
+ * - Talpa (size, capacity, empty, reserve, shrink_to_fit, max_size)
+ * - Modifikatoriai (push_back, pop_back, emplace_back, insert,
+ *                   erase, clear, resize, swap, assign)
+ * - Lyginimo operatoriai (==, !=, <, >, <=, >=)
+ *
+ * Naudojimo pavyzdys:
+ * @code
+ * Vector<int> v = {1, 2, 3};
+ * v.push_back(4);
+ * std::sort(v.begin(), v.end());
+ * for (auto x : v) std::cout << x << " ";
+ * @endcode
  */
 
 template <typename T>
