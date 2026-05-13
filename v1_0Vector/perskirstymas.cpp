@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 #include "Vector.h"
-
+using namespace std;
 template <typename Container>
 int skaiciuotiPerskirstymus(unsigned int sz)
 {

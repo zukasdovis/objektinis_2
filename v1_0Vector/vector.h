@@ -4,6 +4,7 @@
 #include <stdexcept>
 #include <algorithm>
 #include <iterator>
+#include <limits>
 
 /**
  * @file Vector.h
