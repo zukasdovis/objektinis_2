@@ -3,6 +3,7 @@
 
 #include "studentai.h"
 #include "failai.h"
+#include "vector.h"
 #include <vector>
 #include <algorithm>
 #include <iostream>
@@ -23,13 +24,13 @@
  * Studentai su balas >= 5.0 lieka grupe,
  * studentai su balas < 5.0 perkeliami į silpniakai.
  *
- * @tparam Container konteinerio tipas (pvz. vector<Studentas>)
+ * @tparam Container konteinerio tipas (pvz. Vector<Studentas>)
  * @param grupe pradinis konteineris - po funkcijos lieka tik >= 5.0
  * @param silpniakai konteineris į kurį perkeliami < 5.0
  *
  * Pavyzdys:
  * @code
- * std::vector<Studentas> grupe, silpniakai;
+ * Vector<Studentas> grupe, silpniakai;
  * splitContainer(grupe, silpniakai);
  * @endcode
  */

@@ -10,37 +10,22 @@
  * @file Vector.h
  * @brief Nuosavas dinaminis masyvas - std::vector analogas
  * @version 3.0
- *
- * @details
- * Realizuoti metodai:
- * - Konstruktoriai (default, copy, move, size, initializer_list)
- * - Rule of Five (copy/move konstruktoriai ir assignment, destruktorius)
- * - Elementų prieiga (at, operator[], front, back, data)
- * - Iteratoriai (begin, end, cbegin, cend)
- * - Talpa (size, capacity, empty, reserve, shrink_to_fit, max_size)
- * - Modifikatoriai (push_back, pop_back, emplace_back, insert,
- *                   erase, clear, resize, swap, assign)
- * - Lyginimo operatoriai (==, !=, <, >, <=, >=)
- *
- * Naudojimo pavyzdys:
- * @code
- * Vector<int> v = {1, 2, 3};
- * v.push_back(4);
- * std::sort(v.begin(), v.end());
- * for (auto x : v) std::cout << x << " ";
- * @endcode
  */
 
+/**
+ * @class Vector
+ * @brief Dinaminio masyvo konteineris
+ * @tparam T elementų tipas
+ */
 template <typename T>
 class Vector
 {
 private:
-    T *data_;         ///< rodyklė į duomenis
-    size_t size_;     ///< elementų kiekis
-    size_t capacity_; ///< rezervuota atminties
+    T *data_;
+    size_t size_;
+    size_t capacity_;
 
 public:
-    // --- tipų apibrėžimai (kaip std::vector) ---
     using value_type = T;
     using size_type = size_t;
     using reference = T &;
@@ -51,20 +36,27 @@ public:
     using const_iterator = const T *;
 
     // =============================================
-    // KONSTRUKTORIAI
+    /// @name Konstruktoriai
+    /// @{
     // =============================================
 
-    /// Default konstruktorius
+    /** @brief Tuščias vektorius */
     Vector() : data_(nullptr), size_(0), capacity_(0) {}
 
-    /// Konstruktorius su dydžiu
+    /**
+     * @brief n elementų su reikšme val
+     * @param n kiekis, @param val reikšmė
+     */
     explicit Vector(size_type n, const T &val = T())
         : data_(nullptr), size_(0), capacity_(0)
     {
         resize(n, val);
     }
 
-    /// Copy konstruktorius
+    /**
+     * @brief Kopijuoja visus elementus iš kitas
+     * @param kitas kopijuojamas vektorius
+     */
     Vector(const Vector &kitas)
         : data_(nullptr), size_(0), capacity_(0)
     {
@@ -74,7 +66,10 @@ public:
         size_ = kitas.size_;
     }
 
-    /// Move konstruktorius
+    /**
+     * @brief Perima atmintį, kitas tampa tuščias
+     * @param kitas perkeliamas vektorius
+     */
     Vector(Vector &&kitas) noexcept
         : data_(kitas.data_), size_(kitas.size_), capacity_(kitas.capacity_)
     {
@@ -83,7 +78,10 @@ public:
         kitas.capacity_ = 0;
     }
 
-    /// Initializer list konstruktorius
+    /**
+     * @brief Iš inicializavimo sąrašo
+     * @param il pvz. {1,2,3}
+     */
     Vector(std::initializer_list<T> il)
         : data_(nullptr), size_(0), capacity_(0)
     {
@@ -92,18 +90,24 @@ public:
             push_back(val);
     }
 
-    /// Destruktorius
+    /** @brief Sunaikina elementus ir atlaisvina atmintį */
     ~Vector()
     {
         clear();
         ::operator delete(data_);
     }
 
+    /// @}
+
     // =============================================
-    // PRISKYRIMO OPERATORIAI
+    /// @name Priskyrimo operatoriai
+    /// @{
     // =============================================
 
-    /// Copy assignment
+    /**
+     * @brief Kopijuoja iš kitas
+     * @return *this
+     */
     Vector &operator=(const Vector &kitas)
     {
         if (this == &kitas)
@@ -116,7 +120,10 @@ public:
         return *this;
     }
 
-    /// Move assignment
+    /**
+     * @brief Perima atmintį iš kitas
+     * @return *this
+     */
     Vector &operator=(Vector &&kitas) noexcept
     {
         if (this == &kitas)
@@ -132,7 +139,10 @@ public:
         return *this;
     }
 
-    /// Initializer list assignment
+    /**
+     * @brief Priskiria iš sąrašo, pvz. v = {1,2,3}
+     * @return *this
+     */
     Vector &operator=(std::initializer_list<T> il)
     {
         clear();
@@ -142,11 +152,17 @@ public:
         return *this;
     }
 
+    /// @}
+
     // =============================================
-    // ELEMENTŲ PRIEIGA
+    /// @name Elementų prieiga
+    /// @{
     // =============================================
 
-    /// Prieiga su ribų tikrinimu
+    /**
+     * @brief Prieiga su ribų tikrinimu
+     * @throws std::out_of_range jei i >= size()
+     */
     reference at(size_type i)
     {
         if (i >= size_)
@@ -154,6 +170,7 @@ public:
         return data_[i];
     }
 
+    /** @copydoc at(size_type) */
     const_reference at(size_type i) const
     {
         if (i >= size_)
@@ -161,44 +178,78 @@ public:
         return data_[i];
     }
 
-    /// Prieiga be ribų tikrinimo
+    /** @brief Prieiga be ribų tikrinimo */
     reference operator[](size_type i) { return data_[i]; }
+
+    /** @copydoc operator[](size_type) */
     const_reference operator[](size_type i) const { return data_[i]; }
 
-    /// Pirmas elementas
+    /** @brief Pirmas elementas */
     reference front() { return data_[0]; }
+
+    /** @copydoc front() */
     const_reference front() const { return data_[0]; }
 
-    /// Paskutinis elementas
+    /** @brief Paskutinis elementas */
     reference back() { return data_[size_ - 1]; }
+
+    /** @copydoc back() */
     const_reference back() const { return data_[size_ - 1]; }
 
-    /// Rodyklė į duomenis
+    /** @brief Rodyklė į vidinį masyvą */
     pointer data() { return data_; }
+
+    /** @copydoc data() */
     const_pointer data() const { return data_; }
 
+    /// @}
+
     // =============================================
-    // ITERATORIAI
+    /// @name Iteratoriai
+    /// @{
     // =============================================
 
+    /** @brief Iteratorius į pirmą elementą */
     iterator begin() { return data_; }
+
+    /** @copydoc begin() */
     const_iterator begin() const { return data_; }
+
+    /** @brief Const iteratorius į pirmą elementą */
     const_iterator cbegin() const { return data_; }
 
+    /** @brief Iteratorius už paskutinio elemento */
     iterator end() { return data_ + size_; }
+
+    /** @copydoc end() */
     const_iterator end() const { return data_ + size_; }
+
+    /** @brief Const iteratorius už paskutinio elemento */
     const_iterator cend() const { return data_ + size_; }
 
+    /// @}
+
     // =============================================
-    // DYDIS IR TALPA
+    /// @name Dydis ir talpa
+    /// @{
     // =============================================
 
+    /** @brief true jei size() == 0 */
     bool empty() const { return size_ == 0; }
+
+    /** @brief Elementų kiekis */
     size_type size() const { return size_; }
+
+    /** @brief Rezervuota talpa */
     size_type capacity() const { return capacity_; }
+
+    /** @brief Maksimalus galimas dydis */
     size_type max_size() const { return std::numeric_limits<size_type>::max(); }
 
-    /// Rezervuoja atmintį
+    /**
+     * @brief Rezervuoja n vietų, perkelia jei reikia
+     * @param n norima talpa
+     */
     void reserve(size_type n)
     {
         if (n <= capacity_)
@@ -214,7 +265,7 @@ public:
         capacity_ = n;
     }
 
-    /// Sumažina capacity iki size
+    /** @brief Sumažina capacity iki size */
     void shrink_to_fit()
     {
         if (size_ == capacity_)
@@ -230,11 +281,14 @@ public:
         capacity_ = size_;
     }
 
+    /// @}
+
     // =============================================
-    // MODIFIKATORIAI
+    /// @name Modifikatoriai
+    /// @{
     // =============================================
 
-    /// Išvalo visus elementus
+    /** @brief Sunaikina elementus, capacity lieka */
     void clear()
     {
         for (size_type i = 0; i < size_; i++)
@@ -242,7 +296,10 @@ public:
         size_ = 0;
     }
 
-    /// Prideda elementą į galą (copy)
+    /**
+     * @brief Prideda kopiją į galą, dvigubina capacity jei pilna
+     * @param val pridedama reikšmė
+     */
     void push_back(const T &val)
     {
         if (size_ == capacity_)
@@ -251,7 +308,10 @@ public:
         size_++;
     }
 
-    /// Prideda elementą į galą (move)
+    /**
+     * @brief Prideda move į galą
+     * @param val perkeliama reikšmė
+     */
     void push_back(T &&val)
     {
         if (size_ == capacity_)
@@ -260,7 +320,10 @@ public:
         size_++;
     }
 
-    /// Konstruoja elementą vietoje gale
+    /**
+     * @brief Konstruoja elementą vietoje gale
+     * @param args konstruktoriaus argumentai
+     */
     template <typename... Args>
     void emplace_back(Args &&...args)
     {
@@ -270,7 +333,7 @@ public:
         size_++;
     }
 
-    /// Pašalina paskutinį elementą
+    /** @brief Pašalina paskutinį elementą */
     void pop_back()
     {
         if (size_ > 0)
@@ -280,7 +343,10 @@ public:
         }
     }
 
-    /// Pakeičia dydį
+    /**
+     * @brief Keičia dydį, nauji elementai = val
+     * @param n naujas dydis, @param val užpildymo reikšmė
+     */
     void resize(size_type n, const T &val = T())
     {
         if (n < size_)
@@ -297,7 +363,10 @@ public:
         size_ = n;
     }
 
-    /// Įterpia elementą į poziciją
+    /**
+     * @brief Įterpia val prieš pos
+     * @return iteratorius į įterptą elementą
+     */
     iterator insert(iterator pos, const T &val)
     {
         size_type idx = pos - data_;
@@ -312,35 +381,34 @@ public:
         size_++;
         return data_ + idx;
     }
-    /// Įterpia elementų intervalą iš iteratorių
+
+    /**
+     * @brief Įterpia intervalą [first,last) prieš pos
+     * @return iteratorius į pirmą įterptą elementą
+     */
     template <typename InputIt>
     iterator insert(iterator pos, InputIt first, InputIt last)
     {
         size_type idx = pos - data_;
         size_type count = std::distance(first, last);
-
         if (size_ + count > capacity_)
             reserve((size_ + count) * 2);
-
-        // pastumiam esamus elementus į dešinę
         for (size_type i = size_ + count - 1; i >= idx + count; i--)
         {
             new (data_ + i) T(std::move(data_[i - count]));
             data_[i - count].~T();
         }
-
-        // įterpiame naujus elementus
         size_type i = idx;
         for (InputIt it = first; it != last; it++, i++)
-        {
             new (data_ + i) T(*it);
-        }
-
         size_ += count;
         return data_ + idx;
     }
 
-    /// Ištrina elementą iš pozicijos
+    /**
+     * @brief Ištrina elementą pos
+     * @return iteratorius į elementą po ištrintojo
+     */
     iterator erase(iterator pos)
     {
         size_type idx = pos - data_;
@@ -354,7 +422,10 @@ public:
         return data_ + idx;
     }
 
-    /// Ištrina elementų intervalą
+    /**
+     * @brief Ištrina intervalą [first,last)
+     * @return iteratorius į elementą po paskutiniojo
+     */
     iterator erase(iterator first, iterator last)
     {
         size_type idx = first - data_;
@@ -370,7 +441,10 @@ public:
         return data_ + idx;
     }
 
-    /// Sukeičia du vektorius
+    /**
+     * @brief Sukeičia du vektorius vietomis
+     * @param kitas kitas vektorius
+     */
     void swap(Vector &kitas) noexcept
     {
         std::swap(data_, kitas.data_);
@@ -378,17 +452,24 @@ public:
         std::swap(capacity_, kitas.capacity_);
     }
 
-    /// Užpildo vektorių reikšmėmis
+    /**
+     * @brief Išvalo ir užpildo n kartų val
+     * @param n kiekis, @param val reikšmė
+     */
     void assign(size_type n, const T &val)
     {
         clear();
         resize(n, val);
     }
 
+    /// @}
+
     // =============================================
-    // LYGINIMO OPERATORIAI
+    /// @name Lyginimo operatoriai
+    /// @{
     // =============================================
 
+    /** @brief true jei vienodas dydis ir visi elementai lygūs */
     bool operator==(const Vector &kitas) const
     {
         if (size_ != kitas.size_)
@@ -399,17 +480,26 @@ public:
         return true;
     }
 
+    /** @brief true jei vektoriai skiriasi */
     bool operator!=(const Vector &kitas) const { return !(*this == kitas); }
 
+    /** @brief Leksikografinis palyginimas */
     bool operator<(const Vector &kitas) const
     {
         return std::lexicographical_compare(begin(), end(),
                                             kitas.begin(), kitas.end());
     }
 
+    /** @brief true jei didesnis leksikografiškai */
     bool operator>(const Vector &kitas) const { return kitas < *this; }
+
+    /** @brief true jei mažesnis arba lygus */
     bool operator<=(const Vector &kitas) const { return !(kitas < *this); }
+
+    /** @brief true jei didesnis arba lygus */
     bool operator>=(const Vector &kitas) const { return !(*this < kitas); }
+
+    /// @}
 };
 
 #endif
